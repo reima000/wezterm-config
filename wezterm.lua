@@ -2,33 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
--- -- Add custom keybindings for copy mode
--- config.keys = {
--- 	-- Enter copy mode using Ctrl-Shift-C
--- 	{
--- 		key = "C",
--- 		mods = "CTRL|SHIFT",
--- 		action = wezterm.action.ActivateCopyMode,
--- 	},
--- 	-- In copy mode, press 'v' to start a selection
--- 	{
--- 		key = "v",
--- 		mods = "NONE",
--- 		action = act.CopyMode({ SetSelectionMode = "Cell" }),
--- 	},
--- 	-- Copy the selection to the clipboard using Ctrl-Shift-C
--- 	{
--- 		key = "C",
--- 		mods = "CTRL|SHIFT",
--- 		action = wezterm.action.CopyTo("Clipboard"),
--- 	},
--- 	-- Exit copy mode with 'Escape'
--- 	{
--- 		key = "Escape",
--- 		mods = "NONE",
--- 		action = wezterm.action.CopyMode("Close"),
--- 	},
--- }
+config.hide_tab_bar_if_only_one_tab = true
 
 config.disable_default_mouse_bindings = true
 
